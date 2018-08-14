@@ -1,0 +1,142 @@
+.cabecera
+  width: 100%
+  height: 35px
+
+  display: flex
+
+  a
+    margin-right: 20px
+    margin-left: auto
+
+    color: $oscuro-claro
+    font-size: .8em
+    font-weight: 500
+    transition: .3s ease-out
+
+  a:hover
+
+    color: $oscuro
+    letter-spacing: 2px
+    transition: .3s ease-in
+
+
+  .perfil-name
+    height: 100%
+    display: flex
+
+    a
+      height: 35px
+      width: 35px
+      margin: auto
+
+      display: block
+      background: url(../imgs/logo.svg)
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+
+
+
+    h1
+      font-size: 1em
+      display: table
+      margin-top: auto
+      color: $oscuro-claro
+
+    h1::before
+      content: " "
+      border-left: 2px solid $oscuro-claro
+      width: 20px
+      margin-right: 5px
+
+    p
+      font-size: .8em
+
+      margin: 0px 5px
+      margin-left: 10px
+      display: table
+      margin-top: auto
+      margin-bottom: 3px
+      color: $oscuro
+      font-weight: 600
+
+.content-header
+  margin: auto
+  margin-top: 320px
+
+  width: 100%
+
+  .inicio-opts
+    display: flex
+    width: 50%
+
+    .opts-btns
+
+      margin: auto
+      margin-left: 20px
+      padding-right: 20px
+
+      border-right: 2px solid $oscuro-claro
+
+      input
+        display: none
+
+      label
+        width: 160px
+        margin: 10px
+        display: block
+        padding: 6px
+        text-align: center
+
+        font-size: .8em
+        font-weight: 600
+        letter-spacing: 2px
+
+        border: $oscuro-claro 2px solid
+        border-radius: 4px
+        box-shadow: 0px 1px 8px -1px $blanco
+        color: $oscuro-claro
+
+        cursor: pointer
+        transition: .3s ease-out
+
+      > label
+        margin-bottom: 15px
+
+      label:hover
+
+        background: $oscuro
+        border: 2px solid $oscuro
+        transition: .5s ease-in .2s
+        color: #ffffff
+
+    .main-copy
+
+      margin: auto
+      margin-left: 10px
+
+      h2
+        font-size: 1em
+        font-style: italic
+        font-weight: 500
+
+        margin-left: 20px
+        color: $oscuro-claro
+
+
+  .copys
+    width: 100%
+    text-align: center
+    margin-top: 90px
+
+    h2
+      font-size: 1em
+      font-weight: 500
+      letter-spacing: 3px
+      color: $oscuro
+
+    h3
+      font-size: .8em
+      font-weight: normal
+      margin: 10px 0px
+      color: $oscuro-claro

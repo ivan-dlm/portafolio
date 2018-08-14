@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif; }
+
+h1 {
+  font-family: "Oswald", sans-serif; }
+
+h2 {
+  font-family: "Montserrat", sans-serif; }
+
+h3 {
+  font-family: "Montserrat", sans-serif; }
+
+P {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.6em; }
+
+a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  background: url(../imgs/fondo-cielo.png);
+  background-attachment: fixed; }
+
+@keyframes fondo-paralax {
+  0% {
+    background-size: 100%;
+    background-position: center; }
+  50% {
+    background-size: 120%;
+    background-position: bottom; }
+  100% {
+    background-size: 100%;
+    background-position: center; } }
+main {
+  width: 300vw;
+  background: url(../imgs/fondo-nubes.png);
+  background-attachment: fixed;
+  animation: fondo-paralax 30s ease-out 0.5s infinite;
+  display: flex; }
+  main header, main section {
+    width: calc(100% / 3);
+    height: 100vh;
+    padding: 20px;
+    border: #fffcf8 1px solid; }
+  main footer {
+    width: 100vw;
+    height: 5vh;
+    padding: 0px 20px;
+    position: fixed;
+    transform: translate(0%, -100%);
+    top: 100%;
+    left: 0px; }
+  main nav {
+    position: fixed;
+    top: 0px;
+    left: 0px; }
+
+.cabecera {
+  width: 100%;
+  height: 35px;
+  display: flex; }
+  .cabecera a {
+    margin-right: 20px;
+    margin-left: auto;
+    color: #9e8d78;
+    font-size: 0.8em;
+    font-weight: 500;
+    transition: 0.3s ease-out; }
+  .cabecera a:hover {
+    color: #35271d;
+    letter-spacing: 2px;
+    transition: 0.3s ease-in; }
+  .cabecera .perfil-name {
+    height: 100%;
+    display: flex; }
+    .cabecera .perfil-name a {
+      height: 35px;
+      width: 35px;
+      margin: auto;
+      display: block;
+      background: url(../imgs/logo.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat; }
+    .cabecera .perfil-name h1 {
+      font-size: 1em;
+      display: table;
+      margin-top: auto;
+      color: #9e8d78; }
+    .cabecera .perfil-name h1::before {
+      content: " ";
+      border-left: 2px solid #9e8d78;
+      width: 20px;
+      margin-right: 5px; }
+    .cabecera .perfil-name p {
+      font-size: 0.8em;
+      margin: 0px 5px;
+      margin-left: 10px;
+      display: table;
+      margin-top: auto;
+      margin-bottom: 3px;
+      color: #35271d;
+      font-weight: 600; }
+
+.content-header {
+  margin: auto;
+  margin-top: 320px;
+  width: 100%; }
+  .content-header .inicio-opts {
+    display: flex;
+    width: 50%; }
+    .content-header .inicio-opts .opts-btns {
+      margin: auto;
+      margin-left: 20px;
+      padding-right: 20px;
+      border-right: 2px solid #9e8d78; }
+      .content-header .inicio-opts .opts-btns input {
+        display: none; }
+      .content-header .inicio-opts .opts-btns label {
+        width: 160px;
+        margin: 10px;
+        display: block;
+        padding: 6px;
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border: #9e8d78 2px solid;
+        border-radius: 4px;
+        box-shadow: 0px 1px 8px -1px #fffcf8;
+        color: #9e8d78;
+        cursor: pointer;
+        transition: 0.3s ease-out; }
+      .content-header .inicio-opts .opts-btns > label {
+        margin-bottom: 15px; }
+      .content-header .inicio-opts .opts-btns label:hover {
+        background: #35271d;
+        border: 2px solid #35271d;
+        transition: 0.5s ease-in 0.2s;
+        color: #ffffff; }
+    .content-header .inicio-opts .main-copy {
+      margin: auto;
+      margin-left: 10px; }
+      .content-header .inicio-opts .main-copy h2 {
+        font-size: 1em;
+        font-style: italic;
+        font-weight: 500;
+        margin-left: 20px;
+        color: #9e8d78; }
+  .content-header .copys {
+    width: 100%;
+    text-align: center;
+    margin-top: 90px; }
+    .content-header .copys h2 {
+      font-size: 1em;
+      font-weight: 500;
+      letter-spacing: 3px;
+      color: #35271d; }
+    .content-header .copys h3 {
+      font-size: 0.8em;
+      font-weight: normal;
+      margin: 10px 0px;
+      color: #9e8d78; }
+
+nav {
+  width: 55px;
+  height: 100%;
+  padding-top: 20px;
+  background: #9e8d78;
+  opacity: 0.8; }
+  nav input {
+    display: none; }
+  nav label {
+    color: #fffcf8;
+    font-size: 0.6em;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fffcf8;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translate(-50%, -50%);
+    transform: rotate(270deg);
+    cursor: pointer; }
+  nav .menu-c {
+    display: none; }
+  nav a:first-of-type {
+    height: 35px;
+    width: 35px;
+    margin: auto;
+    display: block;
+    background: url(../imgs/logo-blanco.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  nav ul {
+    display: none; }
+
+.portafolio p:first-of-type {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5em; }
+.portafolio p:last-of-type {
+  margin-top: 40px; }
+.portafolio p {
+  margin-left: 75px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 3px; }
+.portafolio .categorias {
+  width: calc(100% - 120px);
+  margin-left: 75px;
+  display: flex;
+  margin-bottom: 20px; }
+  .portafolio .categorias a {
+    border: red solid 1px;
+    display: block;
+    width: 300px;
+    height: 450px;
+    margin: auto;
+    padding-top: 27%;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: #9e8d78; }
+.portafolio .trabajos-proyectos {
+  width: calc(100% - 140px);
+  margin: 40px auto 100px 95px;
+  height: 450px;
+  border: solid red 1px; }
+
+.curriculum {
+  padding: 20px;
+  padding-left: 75px; }
+  .curriculum p:first-of-type {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 3px; }
+  .curriculum .perfil-info {
+    display: flex;
+    width: 350px;
+    margin: 10px 20px; }
+    .curriculum .perfil-info img {
+      width: 110px;
+      height: 130px; }
+    .curriculum .perfil-info ul {
+      margin-left: 10px;
+      margin-bottom: 10px;
+      margin-top: auto; }
+      .curriculum .perfil-info ul li {
+        font-size: 0.8em;
+        font-weight: 600;
+        font-family: "Open Sans", sans-serif; }
+  .curriculum .cont-specs {
+    display: flex;
+    width: calc(75% - 40px);
+    padding: 10px;
+    margin-left: 20px;
+    font-size: 0.8em;
+    float: left; }
+    .curriculum .cont-specs .specs {
+      width: 35%;
+      color: #35271d;
+      margin-right: 20px; }
+      .curriculum .cont-specs .specs ul {
+        padding: 10px; }
+        .curriculum .cont-specs .specs ul li {
+          margin: 0px 0px 10px 10px;
+          letter-spacing: 1px; }
+          .curriculum .cont-specs .specs ul li b {
+            letter-spacing: 0px; }
+      .curriculum .cont-specs .specs h3 {
+        font-size: 1em; }
+      .curriculum .cont-specs .specs ol {
+        list-style: none; }
+    .curriculum .cont-specs .habilidades {
+      width: 20%; }
+      .curriculum .cont-specs .habilidades ol li {
+        margin-left: 10px; }
+  .curriculum .comp-specs {
+    width: calc(25% - 40px);
+    margin-right: 40px;
+    margin-top: 40px;
+    border: #9e8d78 2px solid;
+    color: #9e8d78;
+    border-radius: 4px;
+    float: right; }
+    .curriculum .comp-specs ul {
+      padding: 10px; }
+      .curriculum .comp-specs ul li {
+        font-size: 0.7em;
+        margin: 10px;
+        letter-spacing: 1px; }
+        .curriculum .comp-specs ul li i {
+          font-weight: bold;
+          letter-spacing: 0px; }
+
+footer a {
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  transform: rotate(270deg);
+  color: #9e8d78;
+  font-size: 0.8em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: 0.3s ease-out; }
+footer a:hover {
+  color: #35271d;
+  transition: 0.3s ease-in; }
+
+/*# sourceMappingURL=main.css.map */

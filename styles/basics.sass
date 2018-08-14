@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700')
+
+$font-h1: 'Oswald', sans-serif
+$font-h2: 'Montserrat', sans-serif
+$font-simple: 'Open Sans', sans-serif
+
+$oscuro: #35271d
+$oscuro-claro: #9e8d78
+
+$blanco: #fffcf8
+
+*
+  padding: 0px
+  margin: 0px
+  box-sizing: border-box
+  font-family: 'Open Sans', sans-serif
+
+h1
+  font-family: $font-h1
+
+h2
+  font-family: $font-h2
+
+h3
+  font-family: $font-h2
+
+P
+  font-family: $font-simple
+  font-size: .6em
+
+a
+  font-family: $font-h2
+  font-size: .8em
+  text-decoration: none
+
+ul
+  li
+    list-style: none
+
+body
+  width: 100vw
+  height: 100vh
+  overflow-y: scroll
+  overflow-x: scroll
+
+  background: url(../imgs/fondo-cielo.png)
+  background-attachment: fixed
+
+@keyframes fondo-paralax
+  0%
+    background-size: 100%
+    background-position: center
+  50%
+    background-size: 120%
+    background-position: bottom
+  100%
+    background-size: 100%
+    background-position: center
+
+main
+  width: 300vw
+
+  background: url(../imgs/fondo-nubes.png)
+  background-attachment: fixed
+
+  animation: fondo-paralax 30s ease-out .5s infinite
+
+  display: flex
+
+  header, section
+
+    width: calc(100% / 3)
+    height: 100vh
+    padding: 20px
+
+    border: $blanco 1px solid
+
+
+  footer
+
+    width: 100vw
+    height: 5vh
+    padding: 0px 20px
+
+    position: fixed
+    transform: translate(0%, -100%)
+    top: 100%
+    left: 0px
+
+  nav
+    position: fixed
+    top: 0px
+    left: 0px
+    
+
+  .curriculum, .portafolio
